@@ -4,7 +4,20 @@
     box-sizing: border-box;
 }
 body{
+    margin-top: 9px;
+    margin-left: 26px;
+    
     font-family: "Teachers", sans-serif;
+    background: linear-gradient(
+    106.5deg,
+    rgba(255, 215, 185, 0.91) 23%,
+    rgba(223, 159, 247, 0.8) 93%
+  );
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  
 }
 .container{
     height: 100vh;
@@ -20,12 +33,13 @@ header,main,footer,aside{
 aside{
     grid-column: 2;
     grid-row: 1/-1;
-    padding-right: 10vw;
+    padding-right: 6.5vw;
 }
 aside video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    margin: 0;
 }
 
 @media screen and (max-width: 680px){
@@ -38,4 +52,91 @@ aside video{
         grid-column: 1;
         padding: 0;
     }
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+}
+.logo{
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+}
+.logo:hover{
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition-duration: 0.5s;
+    border-radius: 5px;
+}
+header ul{
+    margin-top: 5px;
+    list-style: none;
+    text-align: right;
+    color: red;
+}
+header ul li:first-child{
+    font-weight: 700;
+    color: black;
+    margin-bottom: 35px;
+    font-size: 17px;
+}
+
+main{
+    font-size: 5vw;
+    line-height: 1;
+    letter-spacing: 18px;
+    font-weight: 400;
+  
+  
+  
+}
+
+footer{
+    font-size: 16px;
+   
+}
+
+
+@keyframes rotation{
+    0%{
+        background: linear-gradient(
+            80deg,
+            rgba(255, 215, 185, 0.91) 23%,
+            rgba(223, 159, 247, 0.8) 93%
+          );
+
+    }
+    50%{
+        background: linear-gradient(
+            190deg,
+            rgba(255, 215, 185, 0.91) 23%,
+            rgba(223, 159, 247, 0.8) 93%
+          );
+    }
+    100%{
+        background: linear-gradient(
+            280deg,
+            rgba(255, 215, 185, 0.91) 23%,
+            rgba(223, 159, 247, 0.8) 93%
+          );
+    }
+}
+
+.icon{
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    left: 52.10%;
+    top:50%;
+    transform: translate(2%, -60%); 
+    color: white;
+    background-color: rgba(255, 192, 203, 0.473);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
